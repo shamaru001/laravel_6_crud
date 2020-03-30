@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  laravel_6:
+    image: thecodingmachine/php:7.2-v1-apache
+#    user: "1000:1000"
+    container_name: laravel_6
+    ports:
+    - 8000:80
+    volumes:
+    - .:/var/www/
+#    command: "php artisan serve --host=0.0.0.0"
+    working_dir: /var/www/
+    environment:
+      PHP_EXTENSION_XDEBUG: 1
