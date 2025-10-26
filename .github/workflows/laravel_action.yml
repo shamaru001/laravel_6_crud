@@ -1,0 +1,21 @@
+name: laravel_action_test_name
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  laravel_action_test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up PHP
+        uses: actions/setup-php@v3
+        with:
+          php-version: "8.1"
+      - name: show message
+        run: echo "Laravel action test successful"
+      - name: php version
+        run: php -v
+      - name: composer version
+        run: composer -V
