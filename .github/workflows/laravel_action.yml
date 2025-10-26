@@ -14,9 +14,13 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: "8.4"
+      - name: generate a file to test
+        run: echo "Laravel action test file" > laravel_action_test_file.txt
       - name: show message
         run: echo "Laravel action test successful"
       - name: php version
         run: php -v
       - name: composer version
         run: composer -V
+      - name: list files
+        run: ls -la
