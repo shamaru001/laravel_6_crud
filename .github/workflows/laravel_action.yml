@@ -2,7 +2,7 @@ name: laravel_action_test_name
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   laravel_action_test_job:
